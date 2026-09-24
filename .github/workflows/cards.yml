@@ -1,0 +1,45 @@
+name: Cards de estatísticas do perfil
+
+# Gera os cards da seção "Estatísticas" do README, recolore para a paleta do perfil
+# e commita os SVGs no próprio repositório (nenhum serviço externo é usado ao abrir o perfil).
+on:
+  schedule:
+    - cron: "17 3 * * *" # todo dia, 03:17 UTC
+  workflow_dispatch: # também dá para rodar manualmente na aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Gerar cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          THEME: github_dark
+          UTC_OFFSET: -3
+          AUTO_PUSH: false
+
+      - name: Aplicar a paleta do perfil
+        run: |
+          sed -i \
+            -e 's/#0d1117/#050506/gI' \
+            -e 's/#2e343b/#2b0a0e/gI' \
+            -e 's/#0366d6/#c1121f/gI' \
+            -e 's/#77909c/#cfc9bb/gI' \
+            -e 's/#8b949e/#c1121f/gI' \
+            -e 's/#40c463/#c1121f/gI' \
+            profile-summary-card-output/github_dark/*.svg
+
+      - name: Commitar os cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-summary-card-output
+          git diff --cached --quiet || (git commit -m "chore: atualiza os cards do perfil" && git push)
