@@ -18,13 +18,13 @@
 
 <h2 align="center">⚔️ About me</h2>
 
-<img align="right" src="./assets/about.svg" alt="Code snippet describing the profile: software developer, focused on web and computer vision, building Linka" width="420" />
-
 - 🏰 Building **[Linka](https://github.com/GBaratieri/Linka)**: a SaaS platform that generates and maintains a Brazilian micro-business's landing page from a single link (Instagram or Google).
 - 🧪 On Linka, I apply automated testing (Vitest), row-level security (RLS) in Postgres and documented technical decisions in `docs/`.
 - 👁️ Exploring **computer vision**: real-time vehicle detection and tracking with YOLOv8 and ByteTrack.
 
-<br clear="right" />
+<p align="center">
+  <img src="./assets/about.svg" alt="Code snippet describing the profile: software developer, focused on web and computer vision, building Linka" width="520" />
+</p>
 
 <h2 align="center">🛡️ Arsenal</h2>
 
