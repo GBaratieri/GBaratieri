@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/giovanny-baratieri/"><img src="https://img.shields.io/badge/LinkedIn-c1121f?style=for-the-badge" alt="LinkedIn" /></a>
   <a href="mailto:giovanny.baratieri@gmail.com"><img src="https://img.shields.io/badge/Email-26262b?style=for-the-badge" alt="Email" /></a>
-  <img src="https://komarev.com/ghpvc/?username=GBaratieri&label=VIEWS&color=5c0910&style=for-the-badge" alt="Profile views" />
+  <img src="https://vbr.nathanchung.dev/badge?page_id=GBaratieri.GBaratieri&text=VIEWS&color=5c0910&lcolor=555&style=for-the-badge" alt="Profile views" />
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt="" />
